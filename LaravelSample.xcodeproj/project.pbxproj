@@ -1,0 +1,888 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5F6B2AFC2601F794009F2B57 /* LaravelSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2AFB2601F794009F2B57 /* LaravelSampleApp.swift */; };
+		5F6B2AFE2601F794009F2B57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2AFD2601F794009F2B57 /* ContentView.swift */; };
+		5F6B2B002601F798009F2B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2AFF2601F798009F2B57 /* Assets.xcassets */; };
+		5F6B2B032601F798009F2B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2B022601F798009F2B57 /* Preview Assets.xcassets */; };
+		5F6B2B0E2601F798009F2B57 /* LaravelSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B0D2601F798009F2B57 /* LaravelSampleTests.swift */; };
+		5F6B2B192601F798009F2B57 /* LaravelSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B182601F798009F2B57 /* LaravelSampleUITests.swift */; };
+		5F6B2B1E2601F798009F2B57 /* LaravelSample WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 5F6B2B1D2601F798009F2B57 /* LaravelSample WatchKit App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F6B2B232601F79A009F2B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2B222601F79A009F2B57 /* Assets.xcassets */; };
+		5F6B2B2A2601F79A009F2B57 /* LaravelSample WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5F6B2B292601F79A009F2B57 /* LaravelSample WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5F6B2B2F2601F79A009F2B57 /* LaravelSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B2E2601F79A009F2B57 /* LaravelSampleApp.swift */; };
+		5F6B2B312601F79A009F2B57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B302601F79A009F2B57 /* ContentView.swift */; };
+		5F6B2B332601F79A009F2B57 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B322601F79A009F2B57 /* NotificationController.swift */; };
+		5F6B2B352601F79A009F2B57 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B342601F79A009F2B57 /* NotificationView.swift */; };
+		5F6B2B372601F79A009F2B57 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B362601F79A009F2B57 /* ComplicationController.swift */; };
+		5F6B2B392601F79B009F2B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2B382601F79B009F2B57 /* Assets.xcassets */; };
+		5F6B2B3C2601F79B009F2B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2B3B2601F79B009F2B57 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5F6B2B0A2601F798009F2B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F6B2AF02601F794009F2B57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F6B2AF72601F794009F2B57;
+			remoteInfo = LaravelSample;
+		};
+		5F6B2B152601F798009F2B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F6B2AF02601F794009F2B57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F6B2AF72601F794009F2B57;
+			remoteInfo = LaravelSample;
+		};
+		5F6B2B1F2601F798009F2B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F6B2AF02601F794009F2B57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F6B2B1C2601F798009F2B57;
+			remoteInfo = "LaravelSample WatchKit App";
+		};
+		5F6B2B2B2601F79A009F2B57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F6B2AF02601F794009F2B57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5F6B2B282601F79A009F2B57;
+			remoteInfo = "LaravelSample WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5F6B2B442601F79B009F2B57 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5F6B2B2A2601F79A009F2B57 /* LaravelSample WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B482601F79B009F2B57 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				5F6B2B1E2601F798009F2B57 /* LaravelSample WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		5F6B2AF82601F794009F2B57 /* LaravelSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LaravelSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6B2AFB2601F794009F2B57 /* LaravelSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaravelSampleApp.swift; sourceTree = "<group>"; };
+		5F6B2AFD2601F794009F2B57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5F6B2AFF2601F798009F2B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F6B2B022601F798009F2B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F6B2B042601F798009F2B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F6B2B092601F798009F2B57 /* LaravelSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaravelSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6B2B0D2601F798009F2B57 /* LaravelSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaravelSampleTests.swift; sourceTree = "<group>"; };
+		5F6B2B0F2601F798009F2B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F6B2B142601F798009F2B57 /* LaravelSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaravelSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6B2B182601F798009F2B57 /* LaravelSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaravelSampleUITests.swift; sourceTree = "<group>"; };
+		5F6B2B1A2601F798009F2B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F6B2B1D2601F798009F2B57 /* LaravelSample WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LaravelSample WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6B2B222601F79A009F2B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F6B2B242601F79A009F2B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F6B2B292601F79A009F2B57 /* LaravelSample WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LaravelSample WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F6B2B2E2601F79A009F2B57 /* LaravelSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaravelSampleApp.swift; sourceTree = "<group>"; };
+		5F6B2B302601F79A009F2B57 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5F6B2B322601F79A009F2B57 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		5F6B2B342601F79A009F2B57 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		5F6B2B362601F79A009F2B57 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		5F6B2B382601F79B009F2B57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5F6B2B3B2601F79B009F2B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5F6B2B3D2601F79B009F2B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F6B2B3E2601F79B009F2B57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5F6B2AF52601F794009F2B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B062601F798009F2B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B112601F798009F2B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B262601F79A009F2B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5F6B2AEF2601F794009F2B57 = {
+			isa = PBXGroup;
+			children = (
+				5F6B2AFA2601F794009F2B57 /* LaravelSample */,
+				5F6B2B0C2601F798009F2B57 /* LaravelSampleTests */,
+				5F6B2B172601F798009F2B57 /* LaravelSampleUITests */,
+				5F6B2B212601F798009F2B57 /* LaravelSample WatchKit App */,
+				5F6B2B2D2601F79A009F2B57 /* LaravelSample WatchKit Extension */,
+				5F6B2AF92601F794009F2B57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5F6B2AF92601F794009F2B57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2AF82601F794009F2B57 /* LaravelSample.app */,
+				5F6B2B092601F798009F2B57 /* LaravelSampleTests.xctest */,
+				5F6B2B142601F798009F2B57 /* LaravelSampleUITests.xctest */,
+				5F6B2B1D2601F798009F2B57 /* LaravelSample WatchKit App.app */,
+				5F6B2B292601F79A009F2B57 /* LaravelSample WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5F6B2AFA2601F794009F2B57 /* LaravelSample */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2AFB2601F794009F2B57 /* LaravelSampleApp.swift */,
+				5F6B2AFD2601F794009F2B57 /* ContentView.swift */,
+				5F6B2AFF2601F798009F2B57 /* Assets.xcassets */,
+				5F6B2B042601F798009F2B57 /* Info.plist */,
+				5F6B2B012601F798009F2B57 /* Preview Content */,
+			);
+			path = LaravelSample;
+			sourceTree = "<group>";
+		};
+		5F6B2B012601F798009F2B57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B022601F798009F2B57 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5F6B2B0C2601F798009F2B57 /* LaravelSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B0D2601F798009F2B57 /* LaravelSampleTests.swift */,
+				5F6B2B0F2601F798009F2B57 /* Info.plist */,
+			);
+			path = LaravelSampleTests;
+			sourceTree = "<group>";
+		};
+		5F6B2B172601F798009F2B57 /* LaravelSampleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B182601F798009F2B57 /* LaravelSampleUITests.swift */,
+				5F6B2B1A2601F798009F2B57 /* Info.plist */,
+			);
+			path = LaravelSampleUITests;
+			sourceTree = "<group>";
+		};
+		5F6B2B212601F798009F2B57 /* LaravelSample WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B222601F79A009F2B57 /* Assets.xcassets */,
+				5F6B2B242601F79A009F2B57 /* Info.plist */,
+			);
+			path = "LaravelSample WatchKit App";
+			sourceTree = "<group>";
+		};
+		5F6B2B2D2601F79A009F2B57 /* LaravelSample WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B2E2601F79A009F2B57 /* LaravelSampleApp.swift */,
+				5F6B2B302601F79A009F2B57 /* ContentView.swift */,
+				5F6B2B322601F79A009F2B57 /* NotificationController.swift */,
+				5F6B2B342601F79A009F2B57 /* NotificationView.swift */,
+				5F6B2B362601F79A009F2B57 /* ComplicationController.swift */,
+				5F6B2B382601F79B009F2B57 /* Assets.xcassets */,
+				5F6B2B3D2601F79B009F2B57 /* Info.plist */,
+				5F6B2B3E2601F79B009F2B57 /* PushNotificationPayload.apns */,
+				5F6B2B3A2601F79B009F2B57 /* Preview Content */,
+			);
+			path = "LaravelSample WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		5F6B2B3A2601F79B009F2B57 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B3B2601F79B009F2B57 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F6B2AF72601F794009F2B57 /* LaravelSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F6B2B492601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSample" */;
+			buildPhases = (
+				5F6B2AF42601F794009F2B57 /* Sources */,
+				5F6B2AF52601F794009F2B57 /* Frameworks */,
+				5F6B2AF62601F794009F2B57 /* Resources */,
+				5F6B2B482601F79B009F2B57 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F6B2B202601F798009F2B57 /* PBXTargetDependency */,
+			);
+			name = LaravelSample;
+			productName = LaravelSample;
+			productReference = 5F6B2AF82601F794009F2B57 /* LaravelSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5F6B2B082601F798009F2B57 /* LaravelSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F6B2B4C2601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSampleTests" */;
+			buildPhases = (
+				5F6B2B052601F798009F2B57 /* Sources */,
+				5F6B2B062601F798009F2B57 /* Frameworks */,
+				5F6B2B072601F798009F2B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F6B2B0B2601F798009F2B57 /* PBXTargetDependency */,
+			);
+			name = LaravelSampleTests;
+			productName = LaravelSampleTests;
+			productReference = 5F6B2B092601F798009F2B57 /* LaravelSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5F6B2B132601F798009F2B57 /* LaravelSampleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F6B2B4F2601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSampleUITests" */;
+			buildPhases = (
+				5F6B2B102601F798009F2B57 /* Sources */,
+				5F6B2B112601F798009F2B57 /* Frameworks */,
+				5F6B2B122601F798009F2B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F6B2B162601F798009F2B57 /* PBXTargetDependency */,
+			);
+			name = LaravelSampleUITests;
+			productName = LaravelSampleUITests;
+			productReference = 5F6B2B142601F798009F2B57 /* LaravelSampleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		5F6B2B1C2601F798009F2B57 /* LaravelSample WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F6B2B452601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSample WatchKit App" */;
+			buildPhases = (
+				5F6B2B1B2601F798009F2B57 /* Resources */,
+				5F6B2B442601F79B009F2B57 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5F6B2B2C2601F79A009F2B57 /* PBXTargetDependency */,
+			);
+			name = "LaravelSample WatchKit App";
+			productName = "LaravelSample WatchKit App";
+			productReference = 5F6B2B1D2601F798009F2B57 /* LaravelSample WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		5F6B2B282601F79A009F2B57 /* LaravelSample WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5F6B2B412601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSample WatchKit Extension" */;
+			buildPhases = (
+				5F6B2B252601F79A009F2B57 /* Sources */,
+				5F6B2B262601F79A009F2B57 /* Frameworks */,
+				5F6B2B272601F79A009F2B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LaravelSample WatchKit Extension";
+			productName = "LaravelSample WatchKit Extension";
+			productReference = 5F6B2B292601F79A009F2B57 /* LaravelSample WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F6B2AF02601F794009F2B57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					5F6B2AF72601F794009F2B57 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					5F6B2B082601F798009F2B57 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 5F6B2AF72601F794009F2B57;
+					};
+					5F6B2B132601F798009F2B57 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 5F6B2AF72601F794009F2B57;
+					};
+					5F6B2B1C2601F798009F2B57 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					5F6B2B282601F79A009F2B57 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+				};
+			};
+			buildConfigurationList = 5F6B2AF32601F794009F2B57 /* Build configuration list for PBXProject "LaravelSample" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5F6B2AEF2601F794009F2B57;
+			productRefGroup = 5F6B2AF92601F794009F2B57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5F6B2AF72601F794009F2B57 /* LaravelSample */,
+				5F6B2B082601F798009F2B57 /* LaravelSampleTests */,
+				5F6B2B132601F798009F2B57 /* LaravelSampleUITests */,
+				5F6B2B1C2601F798009F2B57 /* LaravelSample WatchKit App */,
+				5F6B2B282601F79A009F2B57 /* LaravelSample WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5F6B2AF62601F794009F2B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2B032601F798009F2B57 /* Preview Assets.xcassets in Resources */,
+				5F6B2B002601F798009F2B57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B072601F798009F2B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B122601F798009F2B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B1B2601F798009F2B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2B232601F79A009F2B57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B272601F79A009F2B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2B3C2601F79B009F2B57 /* Preview Assets.xcassets in Resources */,
+				5F6B2B392601F79B009F2B57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5F6B2AF42601F794009F2B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2AFE2601F794009F2B57 /* ContentView.swift in Sources */,
+				5F6B2AFC2601F794009F2B57 /* LaravelSampleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B052601F798009F2B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2B0E2601F798009F2B57 /* LaravelSampleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B102601F798009F2B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2B192601F798009F2B57 /* LaravelSampleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F6B2B252601F79A009F2B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F6B2B332601F79A009F2B57 /* NotificationController.swift in Sources */,
+				5F6B2B312601F79A009F2B57 /* ContentView.swift in Sources */,
+				5F6B2B372601F79A009F2B57 /* ComplicationController.swift in Sources */,
+				5F6B2B2F2601F79A009F2B57 /* LaravelSampleApp.swift in Sources */,
+				5F6B2B352601F79A009F2B57 /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5F6B2B0B2601F798009F2B57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F6B2AF72601F794009F2B57 /* LaravelSample */;
+			targetProxy = 5F6B2B0A2601F798009F2B57 /* PBXContainerItemProxy */;
+		};
+		5F6B2B162601F798009F2B57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F6B2AF72601F794009F2B57 /* LaravelSample */;
+			targetProxy = 5F6B2B152601F798009F2B57 /* PBXContainerItemProxy */;
+		};
+		5F6B2B202601F798009F2B57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F6B2B1C2601F798009F2B57 /* LaravelSample WatchKit App */;
+			targetProxy = 5F6B2B1F2601F798009F2B57 /* PBXContainerItemProxy */;
+		};
+		5F6B2B2C2601F79A009F2B57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5F6B2B282601F79A009F2B57 /* LaravelSample WatchKit Extension */;
+			targetProxy = 5F6B2B2B2601F79A009F2B57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5F6B2B3F2601F79B009F2B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5F6B2B402601F79B009F2B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		5F6B2B422601F79B009F2B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LaravelSample WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LaravelSample WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		5F6B2B432601F79B009F2B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LaravelSample WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LaravelSample WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSample.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		5F6B2B462601F79B009F2B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				IBSC_MODULE = LaravelSample_WatchKit_Extension;
+				INFOPLIST_FILE = "LaravelSample WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Debug;
+		};
+		5F6B2B472601F79B009F2B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				IBSC_MODULE = LaravelSample_WatchKit_Extension;
+				INFOPLIST_FILE = "LaravelSample WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSample.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 7.0;
+			};
+			name = Release;
+		};
+		5F6B2B4A2601F79B009F2B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LaravelSample/Preview Content\"";
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LaravelSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5F6B2B4B2601F79B009F2B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LaravelSample/Preview Content\"";
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LaravelSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F6B2B4D2601F79B009F2B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				INFOPLIST_FILE = LaravelSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaravelSample.app/LaravelSample";
+			};
+			name = Debug;
+		};
+		5F6B2B4E2601F79B009F2B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				INFOPLIST_FILE = LaravelSampleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSampleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LaravelSample.app/LaravelSample";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5F6B2B502601F79B009F2B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				INFOPLIST_FILE = LaravelSampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LaravelSample;
+			};
+			name = Debug;
+		};
+		5F6B2B512601F79B009F2B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNWDNX3S69;
+				INFOPLIST_FILE = LaravelSampleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = araiyusuke.LaravelSampleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LaravelSample;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5F6B2AF32601F794009F2B57 /* Build configuration list for PBXProject "LaravelSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B2B3F2601F79B009F2B57 /* Debug */,
+				5F6B2B402601F79B009F2B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F6B2B412601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSample WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B2B422601F79B009F2B57 /* Debug */,
+				5F6B2B432601F79B009F2B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F6B2B452601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSample WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B2B462601F79B009F2B57 /* Debug */,
+				5F6B2B472601F79B009F2B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F6B2B492601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B2B4A2601F79B009F2B57 /* Debug */,
+				5F6B2B4B2601F79B009F2B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F6B2B4C2601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B2B4D2601F79B009F2B57 /* Debug */,
+				5F6B2B4E2601F79B009F2B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5F6B2B4F2601F79B009F2B57 /* Build configuration list for PBXNativeTarget "LaravelSampleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F6B2B502601F79B009F2B57 /* Debug */,
+				5F6B2B512601F79B009F2B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F6B2AF02601F794009F2B57 /* Project object */;
+}
