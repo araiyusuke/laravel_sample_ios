@@ -134,6 +134,7 @@
 		5F8910672603585E00C694DD /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		5F89106E26057E7200C694DD /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
 		5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKeychainRepositries.swift; sourceTree = "<group>"; };
+		5FA081B82606B6B4006DC19D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +173,7 @@
 		5F6B2AEF2601F794009F2B57 = {
 			isa = PBXGroup;
 			children = (
+				5FA081B82606B6B4006DC19D /* README.md */,
 				5F6B2AFA2601F794009F2B57 /* LaravelSample */,
 				5F6B2B0C2601F798009F2B57 /* LaravelSampleTests */,
 				5F6B2B172601F798009F2B57 /* LaravelSampleUITests */,
