@@ -9,17 +9,16 @@ import Foundation
 
 extension DIContainer {
     
-    // インタラクタを管理する
     struct Interactors {
         
-        let authInteractor: AuthInteractor
+        let bearerTokenInteractor: BearerTokenInteractor
         
-        init(authInteractor: AuthInteractor) {
-            self.authInteractor = authInteractor
+        init(bearerTokenInteractor: BearerTokenInteractor) {
+            self.bearerTokenInteractor = bearerTokenInteractor
         }
         
         static var stub: Self {
-            .init(authInteractor: StubAuthInteractor())
+            .init(bearerTokenInteractor: StubAuthInteractor())
         }
     }
 }

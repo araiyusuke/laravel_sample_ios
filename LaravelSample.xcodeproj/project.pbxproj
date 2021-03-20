@@ -27,7 +27,7 @@
 		5F6B2B6C2601FC57009F2B57 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B6B2601FC57009F2B57 /* Loadable.swift */; };
 		5F6B2B7D26020A5E009F2B57 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B7C26020A5E009F2B57 /* APICall.swift */; };
 		5F6B2B8426020AF8009F2B57 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B8326020AF8009F2B57 /* WebRepository.swift */; };
-		5F6B2B8B26022C5E009F2B57 /* AuthWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B8A26022C5E009F2B57 /* AuthWebRepository.swift */; };
+		5F6B2B8B26022C5E009F2B57 /* BearerTokenWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B8A26022C5E009F2B57 /* BearerTokenWebRepository.swift */; };
 		5F89102C2602C47F00C694DD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89102B2602C47F00C694DD /* Models.swift */; };
 		5F89103426031FC300C694DD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5F89103326031FC300C694DD /* KeychainAccess */; };
 		5F89103B2603482F00C694DD /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89103A2603482F00C694DD /* Credential.swift */; };
@@ -36,7 +36,8 @@
 		5F89105C2603574C00C694DD /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89105B2603574C00C694DD /* DependencyInjector.swift */; };
 		5F8910682603585E00C694DD /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8910672603585E00C694DD /* InteractorsContainer.swift */; };
 		5F89106F26057E7200C694DD /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89106E26057E7200C694DD /* NetworkingHelpers.swift */; };
-		5F891076260589DB00C694DD /* AuthKeychainRepositries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */; };
+		5F891076260589DB00C694DD /* BearerTokenKeychainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F891075260589DB00C694DD /* BearerTokenKeychainRepository.swift */; };
+		5FA081C42606BE86006DC19D /* KeyChainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081C32606BE86006DC19D /* KeyChainRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,7 +126,7 @@
 		5F6B2B6B2601FC57009F2B57 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
 		5F6B2B7C26020A5E009F2B57 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
 		5F6B2B8326020AF8009F2B57 /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
-		5F6B2B8A26022C5E009F2B57 /* AuthWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebRepository.swift; sourceTree = "<group>"; };
+		5F6B2B8A26022C5E009F2B57 /* BearerTokenWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearerTokenWebRepository.swift; sourceTree = "<group>"; };
 		5F89102B2602C47F00C694DD /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		5F89103A2603482F00C694DD /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
 		5F8910472603514C00C694DD /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
@@ -133,8 +134,9 @@
 		5F89105B2603574C00C694DD /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 		5F8910672603585E00C694DD /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
 		5F89106E26057E7200C694DD /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
-		5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKeychainRepositries.swift; sourceTree = "<group>"; };
+		5F891075260589DB00C694DD /* BearerTokenKeychainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BearerTokenKeychainRepository.swift; sourceTree = "<group>"; };
 		5FA081B82606B6B4006DC19D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5FA081C32606BE86006DC19D /* KeyChainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,9 +296,8 @@
 		5F6B2B5B2601F9C0009F2B57 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				5F6B2B8326020AF8009F2B57 /* WebRepository.swift */,
-				5F6B2B8A26022C5E009F2B57 /* AuthWebRepository.swift */,
-				5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */,
+				5FA081D52606C261006DC19D /* KeyChain */,
+				5FA081D42606C240006DC19D /* Web */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -341,6 +342,24 @@
 				5F8910672603585E00C694DD /* InteractorsContainer.swift */,
 			);
 			path = Injected;
+			sourceTree = "<group>";
+		};
+		5FA081D42606C240006DC19D /* Web */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B8A26022C5E009F2B57 /* BearerTokenWebRepository.swift */,
+				5F6B2B8326020AF8009F2B57 /* WebRepository.swift */,
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		5FA081D52606C261006DC19D /* KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				5FA081C32606BE86006DC19D /* KeyChainRepository.swift */,
+				5F891075260589DB00C694DD /* BearerTokenKeychainRepository.swift */,
+			);
+			path = KeyChain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,8 +560,8 @@
 			files = (
 				5F6B2B642601FA68009F2B57 /* LoginView.swift in Sources */,
 				5F6B2B6C2601FC57009F2B57 /* Loadable.swift in Sources */,
-				5F6B2B8B26022C5E009F2B57 /* AuthWebRepository.swift in Sources */,
-				5F891076260589DB00C694DD /* AuthKeychainRepositries.swift in Sources */,
+				5F6B2B8B26022C5E009F2B57 /* BearerTokenWebRepository.swift in Sources */,
+				5F891076260589DB00C694DD /* BearerTokenKeychainRepository.swift in Sources */,
 				5F8910542603542A00C694DD /* AuthInteractor.swift in Sources */,
 				5F89105C2603574C00C694DD /* DependencyInjector.swift in Sources */,
 				5F89102C2602C47F00C694DD /* Models.swift in Sources */,
@@ -554,6 +573,7 @@
 				5F6B2AFE2601F794009F2B57 /* ContentView.swift in Sources */,
 				5F8910682603585E00C694DD /* InteractorsContainer.swift in Sources */,
 				5F6B2AFC2601F794009F2B57 /* LaravelSampleApp.swift in Sources */,
+				5FA081C42606BE86006DC19D /* KeyChainRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

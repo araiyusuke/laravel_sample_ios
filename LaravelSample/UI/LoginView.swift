@@ -16,26 +16,8 @@ struct LoginView: View {
     @State private(set) var auth: Loadable<Token>
     @Environment(\.injected) private var injected: DIContainer
 
-
-    public let authWebRepository = RealAuthWebRepository(
-        session: configuredURLSession(),
-        baseURL: "http://localhost:8081/api/")
-
     init(auth: Loadable<Token> = .notRequested) {
         self._auth = .init(initialValue: auth)
-    }
-    
-    private static func configuredURLSession() -> URLSession {
-        
-        let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 60
-        configuration.timeoutIntervalForResource = 120
-        configuration.waitsForConnectivity = true
-        configuration.httpMaximumConnectionsPerHost = 5
-        // キャッシュを無効
-        configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
-        configuration.urlCache = .shared
-        return URLSession(configuration: configuration)
     }
     
     private var content: AnyView {
@@ -56,8 +38,6 @@ struct LoginView: View {
     }
 }
 
-private var cancellables: Set<AnyCancellable> = []
-
 private extension LoginView {
     var loginFormView: some View {
         VStack(spacing: 20) {
@@ -65,7 +45,7 @@ private extension LoginView {
             TextField("password", text: $password)
             Button(action: {
                 let credential = Credential(password: password, email: email)
-                injected.interactors.authInteractor.signInWithEmailAndPassword(auth: $auth, credential: credential)
+                injected.interactors.bearerTokenInteractor.signInWithEmailAndPassword(auth: $auth, credential: credential)
             }){
                 Text("ログイン")
             }
@@ -90,8 +70,6 @@ private extension LoginView {
             }
         }
     }
-    
-    
 }
 
 struct LoginView_Previews: PreviewProvider {

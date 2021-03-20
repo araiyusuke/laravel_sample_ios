@@ -13,17 +13,35 @@ struct AppEnvironment {
 }
 
 extension AppEnvironment {
-    // シングルトーン
+    
+    // アプリ起動時に呼び出される。
     static func bootstrap() -> AppEnvironment {
+        
+        // インタラクタに渡すWebレポジトリを生成
         let session = configuredURLSession()
         let webRepositories = configuredWebRepositories(session: session)
-        let interactors = configuredInteractors(webRepositories: webRepositories)
+        
+        // インタラクタに渡すキーチェーンレポジトリを生成
+        let keyChainRepositories = configuredKeyChainRepositories()
+        
+        let interactors = configuredInteractors(
+            webRepositories: webRepositories,
+            keyChainRepositories: keyChainRepositories
+        )
+        
         return AppEnvironment(container: .init(interactors: interactors))
     }
     
-    private static func configuredInteractors(webRepositories: DIContainer.WebRepositories) -> DIContainer.Interactors {
-        let authInteractor = RealAuthInteractor(webRepository: webRepositories.authWebRepository)
-        return .init(authInteractor: authInteractor)
+    // インタラクタを生成
+    private static func configuredInteractors(
+        webRepositories: DIContainer.WebRepositories,
+        keyChainRepositories: DIContainer.KeyChainRepositories) -> DIContainer.Interactors {
+        
+        let bearerTokenInteractor = RealBearerTokenInteractor(
+            webRepository: webRepositories.bearerTokenWebRepository,
+            keyChainRepository: keyChainRepositories.bearerTokenKeyChainRepository
+        )
+        return .init(bearerTokenInteractor: bearerTokenInteractor)
     }
     
     // 通信処理の設定
@@ -38,15 +56,27 @@ extension AppEnvironment {
         return URLSession(configuration: configuration)
     }
     
+    // Webレポジトリを生成
     private static func configuredWebRepositories(session: URLSession) -> DIContainer.WebRepositories {
-        let authWebRepository = RealAuthWebRepository(session: session, baseURL: "http://localhost:8081/api/")
-        return .init(authWebRepository: authWebRepository)
+        let bearerTokenWebRepository = RealBearerTokenWebRepository(session: session, baseURL: "http://localhost:8081/api/")
+        return .init(bearerTokenWebRepository: bearerTokenWebRepository)
+    }
+    
+    // キーチェーンレポジトリを生成
+    private static func configuredKeyChainRepositories() -> DIContainer.KeyChainRepositories {
+        return .init(bearerTokenKeyChainRepository: RealBearerTokenKeychainRepository())
     }
     
 }
 
 extension DIContainer {
     struct WebRepositories {
-        let authWebRepository: AuthWebRepository
+        let bearerTokenWebRepository: BearerTokenWebRepository
+    }
+}
+
+extension DIContainer {
+    struct KeyChainRepositories {
+        let bearerTokenKeyChainRepository: RealBearerTokenKeychainRepository
     }
 }

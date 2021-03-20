@@ -8,15 +8,12 @@
 import Foundation
 import Combine
 
-protocol AuthWebRepository: WebRepository {
-//    func loadAuth() -> AnyPublisher<[Country], Error>
-//    func signInWithEmailAndPassword(credential: Credential) -> AnyPublisher<Token, Error>
+protocol BearerTokenWebRepository: WebRepository {
     func signInWithEmailAndPassword(auth: Loadable<Token>, credential: Credential)-> AnyPublisher<Token, Error>
     func signInWithEmailAndPassword(credential: Credential)-> AnyPublisher<Token, Error>
-
 }
 
-struct RealAuthWebRepository: AuthWebRepository {
+struct RealBearerTokenWebRepository: BearerTokenWebRepository {
     let session: URLSession
     let baseURL: String
     var body:Data?
@@ -25,7 +22,6 @@ struct RealAuthWebRepository: AuthWebRepository {
         self.baseURL = baseURL
     }
     
-//    func signInWithEmailAndPassword(credential:Credential) -> AnyPublisher<Token, Error> {
     func signInWithEmailAndPassword(auth: Loadable<Token>, credential:Credential) -> AnyPublisher<Token, Error>  {
         return call(endpoint: API.signIn, credential: credential)
     }
@@ -35,13 +31,13 @@ struct RealAuthWebRepository: AuthWebRepository {
     }
 }
 
-extension RealAuthWebRepository {
+extension RealBearerTokenWebRepository {
     enum API {
         case signIn
     }
 }
 
-extension RealAuthWebRepository.API: APICall {
+extension RealBearerTokenWebRepository.API: APICall {
     var path: String {
         switch self {
         case .signIn:

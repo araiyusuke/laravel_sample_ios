@@ -14,8 +14,6 @@ protocol WebRepository {
 }
 
 extension WebRepository {
-//    func call<Value>(endpoint: APICall,httpCodes: HTTPCodes = .success, credential:Credential)
-//            -> AnyPublisher<Value, Error> where Value: Decodable {
     
     func call<Value>(endpoint: APICall,httpCodes: HTTPCodes = .success, credential:Credential)
             -> AnyPublisher<Value, Error> where Value: Decodable {

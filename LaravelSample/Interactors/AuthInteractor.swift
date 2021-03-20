@@ -9,24 +9,21 @@ import Foundation
 import Combine
 import SwiftUI
 
-protocol AuthInteractor {
-//    func signInWithEmailAndPassword(credential: Credential) -> AnyPublisher<Token, Error>
+protocol BearerTokenInteractor {
     func signInWithEmailAndPassword(auth: Binding<Loadable<Token>>, credential: Credential)
 }
 
 var cancellables1: Set<AnyCancellable> = []
 
-struct RealAuthInteractor:AuthInteractor {
-    let webRepository: AuthWebRepository
-    let keyChainRepository: RealAuthKeychainRepository
+struct RealBearerTokenInteractor: BearerTokenInteractor {
+    let webRepository: BearerTokenWebRepository
+    let keyChainRepository: RealBearerTokenKeychainRepository
 
-    init(webRepository: AuthWebRepository) {
+    init(webRepository: BearerTokenWebRepository, keyChainRepository: RealBearerTokenKeychainRepository) {
         self.webRepository = webRepository
-        self.keyChainRepository = RealAuthKeychainRepository()
+        self.keyChainRepository = keyChainRepository
     }
-    
-//    func signInWithEmailAndPassword(credential: Credential) -> AnyPublisher<Token, Error> {
-    
+        
     func signInWithEmailAndPassword(auth: Binding<Loadable<Token>>, credential: Credential) {
         
         auth.wrappedValue.setIsLoading()
@@ -49,29 +46,9 @@ struct RealAuthInteractor:AuthInteractor {
         return webRepository
             .signInWithEmailAndPassword(credential: credential).eraseToAnyPublisher()
     }
-    
-    
-//    func fetchAndStoreToken(credential: Credential) -> AnyPublisher<Void, Error> {
-//        return webRepository
-//            .signInWithEmailAndPassword(credential: credential)
-//            .flatMap { [keyChainRepository] in
-//                keyChainRepository.store(token: $0)
-//            }
-//            .eraseToAnyPublisher()
-//    }
-//    func fetchAndStoreToken(credential: Credential) -> AnyPublisher<Void, Error> {
-//        return webRepository
-//            .signInWithEmailAndPassword(credential: credential)
-//            .flatMap { [keyChainRepository] in
-//                keyChainRepository.store(token: $0)
-//            }
-//            .eraseToAnyPublisher()
-//    }
 }
 
-struct StubAuthInteractor: AuthInteractor {
-//    func signInWithEmailAndPassword(credential: Credential) -> AnyPublisher<Void, Error>{
+struct StubAuthInteractor: BearerTokenInteractor {
     func signInWithEmailAndPassword(auth: Binding<Loadable<Token>>, credential: Credential) {
-//        return Just<Void>.withErrorType(Error.self)
     }
 }

@@ -7,17 +7,8 @@
 
 import Foundation
 
-struct Test: Codable, Equatable {
-    let apple: String
-    let peach: String
-}
-
 struct Token: Codable, Equatable {
     let token: String
-}
-
-extension Test: Identifiable {
-    var id: String { apple }
 }
 
 struct Country: Codable, Equatable {

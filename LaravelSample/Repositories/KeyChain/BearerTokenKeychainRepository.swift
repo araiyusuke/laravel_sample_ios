@@ -9,11 +9,10 @@ import Foundation
 import Combine
 import KeychainAccess
 
-protocol KeyChainRepository {}
 
-protocol AuthKeychainRepository: KeyChainRepository {}
+protocol BearerTokenKeychainRepository: KeyChainRepository {}
 
-struct RealAuthKeychainRepository: AuthKeychainRepository {
+struct RealBearerTokenKeychainRepository: BearerTokenKeychainRepository {
     
     let key = "laravel2"
     let service = "test.com"
