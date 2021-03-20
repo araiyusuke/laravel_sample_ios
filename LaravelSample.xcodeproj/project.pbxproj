@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,20 @@
 		5F6B2B372601F79A009F2B57 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B362601F79A009F2B57 /* ComplicationController.swift */; };
 		5F6B2B392601F79B009F2B57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2B382601F79B009F2B57 /* Assets.xcassets */; };
 		5F6B2B3C2601F79B009F2B57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F6B2B3B2601F79B009F2B57 /* Preview Assets.xcassets */; };
+		5F6B2B642601FA68009F2B57 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B632601FA68009F2B57 /* LoginView.swift */; };
+		5F6B2B6C2601FC57009F2B57 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B6B2601FC57009F2B57 /* Loadable.swift */; };
+		5F6B2B7D26020A5E009F2B57 /* APICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B7C26020A5E009F2B57 /* APICall.swift */; };
+		5F6B2B8426020AF8009F2B57 /* WebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B8326020AF8009F2B57 /* WebRepository.swift */; };
+		5F6B2B8B26022C5E009F2B57 /* AuthWebRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F6B2B8A26022C5E009F2B57 /* AuthWebRepository.swift */; };
+		5F89102C2602C47F00C694DD /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89102B2602C47F00C694DD /* Models.swift */; };
+		5F89103426031FC300C694DD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 5F89103326031FC300C694DD /* KeychainAccess */; };
+		5F89103B2603482F00C694DD /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89103A2603482F00C694DD /* Credential.swift */; };
+		5F8910482603514C00C694DD /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8910472603514C00C694DD /* AppEnvironment.swift */; };
+		5F8910542603542A00C694DD /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8910532603542A00C694DD /* AuthInteractor.swift */; };
+		5F89105C2603574C00C694DD /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89105B2603574C00C694DD /* DependencyInjector.swift */; };
+		5F8910682603585E00C694DD /* InteractorsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F8910672603585E00C694DD /* InteractorsContainer.swift */; };
+		5F89106F26057E7200C694DD /* NetworkingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F89106E26057E7200C694DD /* NetworkingHelpers.swift */; };
+		5F891076260589DB00C694DD /* AuthKeychainRepositries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +121,19 @@
 		5F6B2B3B2601F79B009F2B57 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5F6B2B3D2601F79B009F2B57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F6B2B3E2601F79B009F2B57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		5F6B2B632601FA68009F2B57 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		5F6B2B6B2601FC57009F2B57 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		5F6B2B7C26020A5E009F2B57 /* APICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICall.swift; sourceTree = "<group>"; };
+		5F6B2B8326020AF8009F2B57 /* WebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRepository.swift; sourceTree = "<group>"; };
+		5F6B2B8A26022C5E009F2B57 /* AuthWebRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthWebRepository.swift; sourceTree = "<group>"; };
+		5F89102B2602C47F00C694DD /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		5F89103A2603482F00C694DD /* Credential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		5F8910472603514C00C694DD /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		5F8910532603542A00C694DD /* AuthInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthInteractor.swift; sourceTree = "<group>"; };
+		5F89105B2603574C00C694DD /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
+		5F8910672603585E00C694DD /* InteractorsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorsContainer.swift; sourceTree = "<group>"; };
+		5F89106E26057E7200C694DD /* NetworkingHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingHelpers.swift; sourceTree = "<group>"; };
+		5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthKeychainRepositries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F89103426031FC300C694DD /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,8 +196,15 @@
 		5F6B2AFA2601F794009F2B57 /* LaravelSample */ = {
 			isa = PBXGroup;
 			children = (
+				5F89105A2603572E00C694DD /* Injected */,
+				5F8910462603513700C694DD /* System */,
+				5F6B2B6A2601FC39009F2B57 /* Utilities */,
+				5F6B2B5D2601F9D6009F2B57 /* Interactors */,
+				5F6B2B5C2601F9CA009F2B57 /* Persistence */,
+				5F6B2B5B2601F9C0009F2B57 /* Repositories */,
+				5F6B2B5A2601F9B9009F2B57 /* Models */,
+				5F6B2B592601F9B1009F2B57 /* UI */,
 				5F6B2AFB2601F794009F2B57 /* LaravelSampleApp.swift */,
-				5F6B2AFD2601F794009F2B57 /* ContentView.swift */,
 				5F6B2AFF2601F798009F2B57 /* Assets.xcassets */,
 				5F6B2B042601F798009F2B57 /* Info.plist */,
 				5F6B2B012601F798009F2B57 /* Preview Content */,
@@ -236,6 +271,76 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		5F6B2B592601F9B1009F2B57 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2AFD2601F794009F2B57 /* ContentView.swift */,
+				5F6B2B632601FA68009F2B57 /* LoginView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		5F6B2B5A2601F9B9009F2B57 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5F89102B2602C47F00C694DD /* Models.swift */,
+				5F89103A2603482F00C694DD /* Credential.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F6B2B5B2601F9C0009F2B57 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B8326020AF8009F2B57 /* WebRepository.swift */,
+				5F6B2B8A26022C5E009F2B57 /* AuthWebRepository.swift */,
+				5F891075260589DB00C694DD /* AuthKeychainRepositries.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5F6B2B5C2601F9CA009F2B57 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		5F6B2B5D2601F9D6009F2B57 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				5F8910532603542A00C694DD /* AuthInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		5F6B2B6A2601FC39009F2B57 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B6B2601FC57009F2B57 /* Loadable.swift */,
+				5F6B2B7C26020A5E009F2B57 /* APICall.swift */,
+				5F89106E26057E7200C694DD /* NetworkingHelpers.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5F8910462603513700C694DD /* System */ = {
+			isa = PBXGroup;
+			children = (
+				5F8910472603514C00C694DD /* AppEnvironment.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		5F89105A2603572E00C694DD /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+				5F89105B2603574C00C694DD /* DependencyInjector.swift */,
+				5F8910672603585E00C694DD /* InteractorsContainer.swift */,
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -254,6 +359,9 @@
 				5F6B2B202601F798009F2B57 /* PBXTargetDependency */,
 			);
 			name = LaravelSample;
+			packageProductDependencies = (
+				5F89103326031FC300C694DD /* KeychainAccess */,
+			);
 			productName = LaravelSample;
 			productReference = 5F6B2AF82601F794009F2B57 /* LaravelSample.app */;
 			productType = "com.apple.product-type.application";
@@ -365,6 +473,9 @@
 				Base,
 			);
 			mainGroup = 5F6B2AEF2601F794009F2B57;
+			packageReferences = (
+				5F89103226031FC300C694DD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+			);
 			productRefGroup = 5F6B2AF92601F794009F2B57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -426,7 +537,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F6B2B642601FA68009F2B57 /* LoginView.swift in Sources */,
+				5F6B2B6C2601FC57009F2B57 /* Loadable.swift in Sources */,
+				5F6B2B8B26022C5E009F2B57 /* AuthWebRepository.swift in Sources */,
+				5F891076260589DB00C694DD /* AuthKeychainRepositries.swift in Sources */,
+				5F8910542603542A00C694DD /* AuthInteractor.swift in Sources */,
+				5F89105C2603574C00C694DD /* DependencyInjector.swift in Sources */,
+				5F89102C2602C47F00C694DD /* Models.swift in Sources */,
+				5F6B2B8426020AF8009F2B57 /* WebRepository.swift in Sources */,
+				5F89106F26057E7200C694DD /* NetworkingHelpers.swift in Sources */,
+				5F8910482603514C00C694DD /* AppEnvironment.swift in Sources */,
+				5F89103B2603482F00C694DD /* Credential.swift in Sources */,
+				5F6B2B7D26020A5E009F2B57 /* APICall.swift in Sources */,
 				5F6B2AFE2601F794009F2B57 /* ContentView.swift in Sources */,
+				5F8910682603585E00C694DD /* InteractorsContainer.swift in Sources */,
 				5F6B2AFC2601F794009F2B57 /* LaravelSampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -883,6 +1007,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5F89103226031FC300C694DD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5F89103326031FC300C694DD /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5F89103226031FC300C694DD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5F6B2AF02601F794009F2B57 /* Project object */;
 }
