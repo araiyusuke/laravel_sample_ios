@@ -27,7 +27,6 @@ extension APICall {
         guard let url = URL(string: baseURL + path) else {
             throw APIError.invalidURL
         }
-        
 //        let str: NSString = "apple=apple_test&peach=peach_test" as NSString
 //        let myData: NSData = str.data(using: String.Encoding.utf8.rawValue)! as NSData
         

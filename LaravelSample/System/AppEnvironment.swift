@@ -41,7 +41,11 @@ extension AppEnvironment {
             webRepository: webRepositories.bearer,
             keyChainRepository: keyChainRepositories.bearer
         )
-        return .init(authInteractor: authInteractor)
+        
+        let userInteractor = RealUserInteractor(
+            webRepository: webRepositories.user)
+        
+        return .init(authInteractor: authInteractor, userInteractor: userInteractor)
     }
     
     // 通信処理の設定
@@ -51,7 +55,8 @@ extension AppEnvironment {
         configuration.timeoutIntervalForResource = 120
         configuration.waitsForConnectivity = true
         configuration.httpMaximumConnectionsPerHost = 5
-        configuration.requestCachePolicy = .returnCacheDataElseLoad
+//        configuration.requestCachePolicy = .returnCacheDataElseLoad
+        configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = .shared
         return URLSession(configuration: configuration)
     }
@@ -61,8 +66,12 @@ extension AppEnvironment {
     
     // Webレポジトリを生成
     private static func configuredWebRepositories(session: URLSession) -> DIContainer.WebRepositories {
+        
         let bearerTokenWebRepository = RealBearerTokenWebRepository(session: session, baseURL: "http://localhost:8081/api/")
-        return .init(bearer: bearerTokenWebRepository)
+        
+        let userWebRepository = RealUserWebRepository(session: session, baseURL: "http://localhost:8081/api/")
+        
+        return .init(bearer: bearerTokenWebRepository, user: userWebRepository)
     }
     
     // キーチェーンレポジトリを生成
@@ -75,6 +84,7 @@ extension AppEnvironment {
 extension DIContainer {
     struct WebRepositories {
         let bearer: BearerTokenWebRepository
+        let user: UserWebRepository
     }
 }
 

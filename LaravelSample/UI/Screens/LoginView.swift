@@ -14,6 +14,7 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private(set) var auth: Loadable<Token>
+    @State private var toSecondView = true
     @Environment(\.injected) private var injected: DIContainer
 
     init(auth: Loadable<Token> = .notRequested) {
@@ -34,7 +35,9 @@ struct LoginView: View {
     }
 
     var body: some View {
-        content
+        NavigationView {
+            content
+        }
     }
 }
 
@@ -57,11 +60,14 @@ private extension LoginView {
     }
     
     func loadedView(token: Token) -> some View {
-        return Text(token.token)
+        NavigationLink(destination: homeView(token: token), isActive: $toSecondView) {
+            EmptyView()
+        }
     }
     
     func errorView(_ error: Error) -> some View {
         return Text("Error").onAppear() {
+            print(error)
             switch error {
             case APIError.unexpectedResponse:
                 print("どうあ")
@@ -69,6 +75,10 @@ private extension LoginView {
                 print("デフォルおｔ")
             }
         }
+    }
+    
+    func homeView(token: Token) -> some View {
+        HomeView(token: token)
     }
 }
 

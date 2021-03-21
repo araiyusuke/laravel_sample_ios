@@ -39,6 +39,10 @@
 		5F891076260589DB00C694DD /* BearerTokenKeychainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F891075260589DB00C694DD /* BearerTokenKeychainRepository.swift */; };
 		5FA081C42606BE86006DC19D /* KeyChainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081C32606BE86006DC19D /* KeyChainRepository.swift */; };
 		5FA081DC2606C885006DC19D /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081DB2606C885006DC19D /* Token.swift */; };
+		5FA081E32606CBEE006DC19D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081E22606CBEE006DC19D /* HomeView.swift */; };
+		5FA081F52606D575006DC19D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081F42606D575006DC19D /* User.swift */; };
+		5FA081FC2606D957006DC19D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081FB2606D957006DC19D /* UserRepository.swift */; };
+		5FA082032606D980006DC19D /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA082022606D980006DC19D /* UserInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +143,10 @@
 		5FA081B82606B6B4006DC19D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		5FA081C32606BE86006DC19D /* KeyChainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainRepository.swift; sourceTree = "<group>"; };
 		5FA081DB2606C885006DC19D /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		5FA081E22606CBEE006DC19D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5FA081F42606D575006DC19D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5FA081FB2606D957006DC19D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		5FA082022606D980006DC19D /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -280,8 +288,7 @@
 		5F6B2B592601F9B1009F2B57 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5F6B2AFD2601F794009F2B57 /* ContentView.swift */,
-				5F6B2B632601FA68009F2B57 /* LoginView.swift */,
+				5FA081E92606CC37006DC19D /* Screens */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -292,6 +299,7 @@
 				5F89102B2602C47F00C694DD /* Models.swift */,
 				5F89103A2603482F00C694DD /* Credential.swift */,
 				5FA081DB2606C885006DC19D /* Token.swift */,
+				5FA081F42606D575006DC19D /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				5F8910532603542A00C694DD /* AuthInteractor.swift */,
+				5FA082022606D980006DC19D /* UserInteractor.swift */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";
@@ -352,6 +361,7 @@
 			children = (
 				5F6B2B8A26022C5E009F2B57 /* BearerTokenWebRepository.swift */,
 				5F6B2B8326020AF8009F2B57 /* WebRepository.swift */,
+				5FA081FB2606D957006DC19D /* UserRepository.swift */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -363,6 +373,16 @@
 				5F891075260589DB00C694DD /* BearerTokenKeychainRepository.swift */,
 			);
 			path = KeyChain;
+			sourceTree = "<group>";
+		};
+		5FA081E92606CC37006DC19D /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5F6B2B632601FA68009F2B57 /* LoginView.swift */,
+				5FA081E22606CBEE006DC19D /* HomeView.swift */,
+				5F6B2AFD2601F794009F2B57 /* ContentView.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -562,6 +582,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6B2B642601FA68009F2B57 /* LoginView.swift in Sources */,
+				5FA082032606D980006DC19D /* UserInteractor.swift in Sources */,
 				5F6B2B6C2601FC57009F2B57 /* Loadable.swift in Sources */,
 				5F6B2B8B26022C5E009F2B57 /* BearerTokenWebRepository.swift in Sources */,
 				5F891076260589DB00C694DD /* BearerTokenKeychainRepository.swift in Sources */,
@@ -570,6 +591,7 @@
 				5F89102C2602C47F00C694DD /* Models.swift in Sources */,
 				5F6B2B8426020AF8009F2B57 /* WebRepository.swift in Sources */,
 				5F89106F26057E7200C694DD /* NetworkingHelpers.swift in Sources */,
+				5FA081E32606CBEE006DC19D /* HomeView.swift in Sources */,
 				5F8910482603514C00C694DD /* AppEnvironment.swift in Sources */,
 				5F89103B2603482F00C694DD /* Credential.swift in Sources */,
 				5F6B2B7D26020A5E009F2B57 /* APICall.swift in Sources */,
@@ -578,6 +600,8 @@
 				5F6B2AFC2601F794009F2B57 /* LaravelSampleApp.swift in Sources */,
 				5FA081DC2606C885006DC19D /* Token.swift in Sources */,
 				5FA081C42606BE86006DC19D /* KeyChainRepository.swift in Sources */,
+				5FA081FC2606D957006DC19D /* UserRepository.swift in Sources */,
+				5FA081F52606D575006DC19D /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
