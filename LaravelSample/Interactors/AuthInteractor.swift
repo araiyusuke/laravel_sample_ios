@@ -9,13 +9,14 @@ import Foundation
 import Combine
 import SwiftUI
 
-protocol BearerTokenInteractor {
-    func signInWithEmailAndPassword(auth: Binding<Loadable<Token>>, credential: Credential)
+protocol AuthInteractor {
+    func signInWithEmailAndPassword(loadable: LoadableSubject<Token>, credential: Credential)
 }
 
 var cancellables1: Set<AnyCancellable> = []
 
-struct RealBearerTokenInteractor: BearerTokenInteractor {
+struct RealAuthInteractor: AuthInteractor {
+    
     let webRepository: BearerTokenWebRepository
     let keyChainRepository: RealBearerTokenKeychainRepository
 
@@ -24,9 +25,9 @@ struct RealBearerTokenInteractor: BearerTokenInteractor {
         self.keyChainRepository = keyChainRepository
     }
         
-    func signInWithEmailAndPassword(auth: Binding<Loadable<Token>>, credential: Credential) {
+    func signInWithEmailAndPassword(loadable: LoadableSubject<Token>, credential: Credential) {
         
-        auth.wrappedValue.setIsLoading()
+        loadable.wrappedValue.setIsLoading()
         
         Just<Void>
             .withErrorType(Error.self)
@@ -37,7 +38,7 @@ struct RealBearerTokenInteractor: BearerTokenInteractor {
                 keyChainRepository.store(token: token)
             }
             .sinkToLoadable {
-                auth.wrappedValue = $0
+                loadable.wrappedValue = $0
             }
             .store(in: &cancellables1)
     }
@@ -48,7 +49,7 @@ struct RealBearerTokenInteractor: BearerTokenInteractor {
     }
 }
 
-struct StubAuthInteractor: BearerTokenInteractor {
-    func signInWithEmailAndPassword(auth: Binding<Loadable<Token>>, credential: Credential) {
+struct StubAuthInteractor: AuthInteractor {
+    func signInWithEmailAndPassword(loadable: LoadableSubject<Token>, credential: Credential) {
     }
 }

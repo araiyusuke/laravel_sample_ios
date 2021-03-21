@@ -6,4 +6,10 @@
 //
 
 import Foundation
-protocol KeyChainRepository {}
+
+protocol KeyChainRepository {
+    var service: String { get }
+    var key: String { get }
+}
+
+

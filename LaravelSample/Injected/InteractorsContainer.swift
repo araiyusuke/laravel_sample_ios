@@ -11,14 +11,14 @@ extension DIContainer {
     
     struct Interactors {
         
-        let bearerTokenInteractor: BearerTokenInteractor
+        let authInteractor: AuthInteractor
         
-        init(bearerTokenInteractor: BearerTokenInteractor) {
-            self.bearerTokenInteractor = bearerTokenInteractor
+        init(authInteractor: AuthInteractor) {
+            self.authInteractor = authInteractor
         }
         
         static var stub: Self {
-            .init(bearerTokenInteractor: StubAuthInteractor())
+            .init(authInteractor: StubAuthInteractor())
         }
     }
 }

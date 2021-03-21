@@ -14,21 +14,8 @@ protocol BearerTokenKeychainRepository: KeyChainRepository {}
 
 struct RealBearerTokenKeychainRepository: BearerTokenKeychainRepository {
     
-    let key = "laravel2"
-    let service = "test.com"
-    
-    func hasStored() -> AnyPublisher<Bool, Error> {
-        Future<Bool, Error> { promise in
-            do {
-                let keychain = Keychain(service: service)
-                let token = try? keychain.getString(key)
-                promise(.success(false))
-            } catch {
-                promise(.failure(error))
-            }
-        }.eraseToAnyPublisher()
-//        return token.publisher.map { $0 == nil }.eraseToAnyPublisher()
-    }
+    let key:String
+    let service:String
     
     func fetch() -> AnyPublisher<Token, Error> {
         Future<Token, Error> { promise in

@@ -37,11 +37,11 @@ extension AppEnvironment {
         webRepositories: DIContainer.WebRepositories,
         keyChainRepositories: DIContainer.KeyChainRepositories) -> DIContainer.Interactors {
         
-        let bearerTokenInteractor = RealBearerTokenInteractor(
-            webRepository: webRepositories.bearerTokenWebRepository,
-            keyChainRepository: keyChainRepositories.bearerTokenKeyChainRepository
+        let authInteractor = RealAuthInteractor(
+            webRepository: webRepositories.bearer,
+            keyChainRepository: keyChainRepositories.bearer
         )
-        return .init(bearerTokenInteractor: bearerTokenInteractor)
+        return .init(authInteractor: authInteractor)
     }
     
     // 通信処理の設定
@@ -56,27 +56,30 @@ extension AppEnvironment {
         return URLSession(configuration: configuration)
     }
     
+    // キーチェーンの設定
+//    private static func configuredKeyChainSetting() -> 
+    
     // Webレポジトリを生成
     private static func configuredWebRepositories(session: URLSession) -> DIContainer.WebRepositories {
         let bearerTokenWebRepository = RealBearerTokenWebRepository(session: session, baseURL: "http://localhost:8081/api/")
-        return .init(bearerTokenWebRepository: bearerTokenWebRepository)
+        return .init(bearer: bearerTokenWebRepository)
     }
     
     // キーチェーンレポジトリを生成
     private static func configuredKeyChainRepositories() -> DIContainer.KeyChainRepositories {
-        return .init(bearerTokenKeyChainRepository: RealBearerTokenKeychainRepository())
+        return .init(bearer: RealBearerTokenKeychainRepository(key: "key", service: "laravel"))
     }
     
 }
 
 extension DIContainer {
     struct WebRepositories {
-        let bearerTokenWebRepository: BearerTokenWebRepository
+        let bearer: BearerTokenWebRepository
     }
 }
 
 extension DIContainer {
     struct KeyChainRepositories {
-        let bearerTokenKeyChainRepository: RealBearerTokenKeychainRepository
+        let bearer: RealBearerTokenKeychainRepository
     }
 }

@@ -45,7 +45,7 @@ private extension LoginView {
             TextField("password", text: $password)
             Button(action: {
                 let credential = Credential(password: password, email: email)
-                injected.interactors.bearerTokenInteractor.signInWithEmailAndPassword(auth: $auth, credential: credential)
+                injected.interactors.authInteractor.signInWithEmailAndPassword(loadable: $auth, credential: credential)
             }){
                 Text("ログイン")
             }

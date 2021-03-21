@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum Loadable<T> {
     case notRequested
@@ -19,3 +20,5 @@ extension Loadable {
         self = .isLoading
     }
 }
+
+typealias LoadableSubject<Value> = Binding<Loadable<Value>>

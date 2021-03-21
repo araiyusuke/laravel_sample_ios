@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct Token: Codable, Equatable {
-    let token: String
-}
-
 struct Country: Codable, Equatable {
     
     let name: String
