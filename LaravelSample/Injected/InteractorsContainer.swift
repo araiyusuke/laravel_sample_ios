@@ -9,15 +9,15 @@ import Foundation
 
 extension DIContainer {
     
+    /// DIで管理するインタラクタ
     struct Interactors {
         
-        let authInteractor: AuthInteractor
-        let userInteractor: UserInteractor
+        let auth: AuthInteractor
+        let user: UserInteractor
 
-        
         init(authInteractor: AuthInteractor, userInteractor: UserInteractor) {
-            self.authInteractor = authInteractor
-            self.userInteractor = userInteractor
+            self.auth = authInteractor
+            self.user = userInteractor
         }
         
         static var stub: Self {

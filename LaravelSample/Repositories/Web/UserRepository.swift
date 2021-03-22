@@ -24,26 +24,26 @@ struct RealUserWebRepository: UserWebRepository {
     }
     
     func load(token: Token) -> AnyPublisher<User, Error>  {
-        return call(endpoint: API.list, token: token)
+        return call(endpoint: API.show, token: token)
     }
 }
 
 extension RealUserWebRepository {
     enum API {
-        case list
+        case show // url/show
     }
 }
 
 extension RealUserWebRepository.API: APICall {
     var path: String {
         switch self {
-        case .list:
+        case .show:
             return "users"
         }
     }
     var method: String {
         switch self {
-        case .list:
+        case .show:
             return "POST"
         }
     }

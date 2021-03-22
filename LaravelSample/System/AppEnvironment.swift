@@ -8,13 +8,15 @@
 import Foundation
 import Combine
 
+/// DIコンテナを管理する。
 struct AppEnvironment {
     let container: DIContainer
 }
 
 extension AppEnvironment {
     
-    // アプリ起動時に呼び出される。
+    ///   インタラクタを生成する。
+    /// - Returns: <#description#>
     static func bootstrap() -> AppEnvironment {
         
         // インタラクタに渡すWebレポジトリを生成
@@ -48,14 +50,14 @@ extension AppEnvironment {
         return .init(authInteractor: authInteractor, userInteractor: userInteractor)
     }
     
-    // 通信処理の設定
+    /// URLSessionを返す
+    /// - Returns: URLSession
     private static func configuredURLSession() -> URLSession {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 60
         configuration.timeoutIntervalForResource = 120
         configuration.waitsForConnectivity = true
         configuration.httpMaximumConnectionsPerHost = 5
-//        configuration.requestCachePolicy = .returnCacheDataElseLoad
         configuration.requestCachePolicy = .reloadIgnoringCacheData
         configuration.urlCache = .shared
         return URLSession(configuration: configuration)

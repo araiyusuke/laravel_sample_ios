@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// APIエラー
 enum APIError: Swift.Error {
     case unexpectedResponse
     case invalidURL
@@ -14,29 +15,29 @@ enum APIError: Swift.Error {
 }
 
 protocol APICall {
+    /// URLのパス
     var path: String { get }
+    /// GET or POST
     var method: String { get }
+    /// HTTP ヘッダー
     var headers: [String: String]? { get }
+    /// POSTの中身
     func body() throws -> Data?
 }
 
-
 extension APICall {
-    
+    /// URLRequestを返す。
+    /// - Parameter baseURL: <#baseURL description#>
+    /// - Throws: <#description#>
+    /// - Returns: <#description#>
     func urlRequest(baseURL: String) throws -> URLRequest {
         guard let url = URL(string: baseURL + path) else {
             throw APIError.invalidURL
         }
-//        let str: NSString = "apple=apple_test&peach=peach_test" as NSString
-//        let myData: NSData = str.data(using: String.Encoding.utf8.rawValue)! as NSData
-        
-        
         var request = URLRequest(url: url)
         request.httpMethod = method
         request.allHTTPHeaderFields = headers
         request.httpBody = try body()
-//        request.httpBody = myData as Data
-
         return request
     }
 }

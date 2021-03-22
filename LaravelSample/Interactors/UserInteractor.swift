@@ -31,7 +31,6 @@ struct RealUserInteractor: UserInteractor {
             .flatMap { [webRepository] _ -> AnyPublisher<User, Error> in
                 webRepository.load(token: token).eraseToAnyPublisher()
             }
-        
             .sinkToLoadable {
                 user.wrappedValue = $0
             }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+/// Laravel SanctumからTokenを取得するための認証情報を管理
 struct Credential {
     var password:String
     var email:String

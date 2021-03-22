@@ -11,7 +11,6 @@ import Combine
 extension Just where Output == Void {
     
     static func withErrorType<E>(_ errorType: E.Type) -> AnyPublisher<Void, E> {
-        
         // ()はVoidを意味する。
         return withErrorType((), E.self)
         // ↓ withErrorTypeへ
@@ -38,21 +37,41 @@ extension Just {
 }
 
 extension Publisher {
+    
+    /// sinkした結果をLoadableに変換する。
+    /// Publisherを購読してエラーならLoadable.failed、それ以外はLoadable.loadedに更新してクロージャの引数に渡して返す。
+    ///
+    /// - Parameter completion: クロージャ
+    /// - Returns: AnyCancellable
     func sinkToLoadable(_ completion: @escaping (Loadable<Output>) -> Void) -> AnyCancellable {
-        
         return sink(receiveCompletion: { subscriptionCompletion in
-
-            // subscriptionCompletionには成功、失敗の結果が代入されている。
-            
-            // flatMapでエラーが発生した場合
+            // Error -> Loadable.failed
             if let error = subscriptionCompletion.error {
+                // クロージャの引数をセットする
                 completion(.failed(error))
             }
-                        
-            
         }, receiveValue: { value in
-            // 状態を.loadedに変更している。
+            // Loadable.loaded
             completion(.loaded(value))
+        })
+    }
+    
+    /// sinkして結果をResultベースに変換して返す。
+    /// - Parameter result: クロージャ
+    /// - Returns: AnyCancellable
+    func sinkToResult(_ result: @escaping (Result<Output, Failure>) -> Void) -> AnyCancellable {
+        return sink(receiveCompletion: { completion in
+            
+            // Error
+            switch completion {
+            case let .failure(error):
+                result(.failure(error))
+            default: break
+            }
+        }, receiveValue: { value in
+            
+            // Success
+            result(.success(value))
         })
     }
 }

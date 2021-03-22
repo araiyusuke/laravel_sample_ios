@@ -38,21 +38,27 @@ extension RealBearerTokenWebRepository {
 }
 
 extension RealBearerTokenWebRepository.API: APICall {
+    
+    /// Enumの値に合わせてURLのパスを返す
     var path: String {
         switch self {
         case .signIn:
             return "singin"
         }
     }
+    
+    /// POST or GET
     var method: String {
         switch self {
         case .signIn:
             return "POST"
         }
     }
+    
     var headers: [String: String]? {
         return ["Accept": "application/json"]
     }
+    
     func body() throws -> Data? {
         return nil
     }

@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// API通信の状態をEnumで管理する。
 enum Loadable<T> {
     case notRequested
     case isLoading
@@ -16,6 +17,7 @@ enum Loadable<T> {
 }
 
 extension Loadable {
+    /// Enumの値を.isLoadingに更新する。
     mutating func setIsLoading() {
         self = .isLoading
     }

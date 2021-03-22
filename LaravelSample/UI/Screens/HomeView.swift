@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct HomeView: View {
     
     @Environment(\.injected) private var injected: DIContainer
@@ -15,7 +14,6 @@ struct HomeView: View {
     
     let token:Token
     
-   
     init(token: Token, user: Loadable<User> = .notRequested) {
         self._user = .init(initialValue: user)
         self.token = token
@@ -40,7 +38,7 @@ struct HomeView: View {
     
     var notRequestedView: some View {
         Text("notRequestedView").onAppear() {
-            injected.interactors.userInteractor.load(user: $user, token: self.token)
+            injected.interactors.user.load(user: $user, token: self.token)
         }
     }
     
@@ -54,11 +52,11 @@ struct HomeView: View {
             Text(user.email)
         }
     }
-    
+
 }
 
-//struct HomeView_Previews: PreviewProvider {
-//    static var previews: some View {
-////        HomeView()
-//    }
-//}
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView(token: Token(token:"fjsjfkd"), user: .loaded(User.mockedData[0]))
+    }
+}

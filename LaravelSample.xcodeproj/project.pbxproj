@@ -43,6 +43,12 @@
 		5FA081F52606D575006DC19D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081F42606D575006DC19D /* User.swift */; };
 		5FA081FC2606D957006DC19D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA081FB2606D957006DC19D /* UserRepository.swift */; };
 		5FA082032606D980006DC19D /* UserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA082022606D980006DC19D /* UserInteractor.swift */; };
+		5FA0820A260734CE006DC19D /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA08209260734CE006DC19D /* MockedData.swift */; };
+		5FA0821226073689006DC19D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0821126073689006DC19D /* ErrorView.swift */; };
+		5FA0821F26073951006DC19D /* UsersWebRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0821E26073951006DC19D /* UsersWebRepositoryTest.swift */; };
+		5FA0822C26073ABE006DC19D /* RequestMocking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0822B26073ABE006DC19D /* RequestMocking.swift */; };
+		5FA0823826073B30006DC19D /* MockedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0823726073B30006DC19D /* MockedResponse.swift */; };
+		5FA0823F260791BB006DC19D /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA0823E260791BB006DC19D /* TestHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +153,12 @@
 		5FA081F42606D575006DC19D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5FA081FB2606D957006DC19D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		5FA082022606D980006DC19D /* UserInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInteractor.swift; sourceTree = "<group>"; };
+		5FA08209260734CE006DC19D /* MockedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedData.swift; sourceTree = "<group>"; };
+		5FA0821126073689006DC19D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		5FA0821E26073951006DC19D /* UsersWebRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersWebRepositoryTest.swift; sourceTree = "<group>"; };
+		5FA0822B26073ABE006DC19D /* RequestMocking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestMocking.swift; sourceTree = "<group>"; };
+		5FA0823726073B30006DC19D /* MockedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedResponse.swift; sourceTree = "<group>"; };
+		5FA0823E260791BB006DC19D /* TestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,8 +249,11 @@
 		5F6B2B0C2601F798009F2B57 /* LaravelSampleTests */ = {
 			isa = PBXGroup;
 			children = (
+				5FA0822A26073AA3006DC19D /* NetworkMocking */,
+				5FA0821D26073914006DC19D /* Repositories */,
 				5F6B2B0D2601F798009F2B57 /* LaravelSampleTests.swift */,
 				5F6B2B0F2601F798009F2B57 /* Info.plist */,
+				5FA0823E260791BB006DC19D /* TestHelper.swift */,
 			);
 			path = LaravelSampleTests;
 			sourceTree = "<group>";
@@ -288,6 +303,7 @@
 		5F6B2B592601F9B1009F2B57 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				5FA082102607367A006DC19D /* Components */,
 				5FA081E92606CC37006DC19D /* Screens */,
 			);
 			path = UI;
@@ -300,6 +316,7 @@
 				5F89103A2603482F00C694DD /* Credential.swift */,
 				5FA081DB2606C885006DC19D /* Token.swift */,
 				5FA081F42606D575006DC19D /* User.swift */,
+				5FA08209260734CE006DC19D /* MockedData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,6 +400,31 @@
 				5F6B2AFD2601F794009F2B57 /* ContentView.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		5FA082102607367A006DC19D /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5FA0821126073689006DC19D /* ErrorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		5FA0821D26073914006DC19D /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				5FA0821E26073951006DC19D /* UsersWebRepositoryTest.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		5FA0822A26073AA3006DC19D /* NetworkMocking */ = {
+			isa = PBXGroup;
+			children = (
+				5FA0822B26073ABE006DC19D /* RequestMocking.swift */,
+				5FA0823726073B30006DC19D /* MockedResponse.swift */,
+			);
+			path = NetworkMocking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -589,12 +631,14 @@
 				5F8910542603542A00C694DD /* AuthInteractor.swift in Sources */,
 				5F89105C2603574C00C694DD /* DependencyInjector.swift in Sources */,
 				5F89102C2602C47F00C694DD /* Models.swift in Sources */,
+				5FA0821226073689006DC19D /* ErrorView.swift in Sources */,
 				5F6B2B8426020AF8009F2B57 /* WebRepository.swift in Sources */,
 				5F89106F26057E7200C694DD /* NetworkingHelpers.swift in Sources */,
 				5FA081E32606CBEE006DC19D /* HomeView.swift in Sources */,
 				5F8910482603514C00C694DD /* AppEnvironment.swift in Sources */,
 				5F89103B2603482F00C694DD /* Credential.swift in Sources */,
 				5F6B2B7D26020A5E009F2B57 /* APICall.swift in Sources */,
+				5FA0820A260734CE006DC19D /* MockedData.swift in Sources */,
 				5F6B2AFE2601F794009F2B57 /* ContentView.swift in Sources */,
 				5F8910682603585E00C694DD /* InteractorsContainer.swift in Sources */,
 				5F6B2AFC2601F794009F2B57 /* LaravelSampleApp.swift in Sources */,
@@ -610,6 +654,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F6B2B0E2601F798009F2B57 /* LaravelSampleTests.swift in Sources */,
+				5FA0823F260791BB006DC19D /* TestHelper.swift in Sources */,
+				5FA0823826073B30006DC19D /* MockedResponse.swift in Sources */,
+				5FA0822C26073ABE006DC19D /* RequestMocking.swift in Sources */,
+				5FA0821F26073951006DC19D /* UsersWebRepositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
